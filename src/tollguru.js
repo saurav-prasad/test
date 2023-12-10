@@ -64,26 +64,26 @@ const tollGuru = async (from, to) => {
     }
     const url = 'https://apis.tollguru.com/toll/v2/origin-destination-waypoints'
     const apiKey = '8j4PRtLBHb238JMHThMhnr2TtTFNjRBF'
-    // const data = await axios.post(url, body1,
-    //     {
-    //         headers: { 'x-api-key': '8j4PRtLBHb238JMHThMhnr2TtTFNjRBF' }
+     const data = await axios.post(url, body1,
+         {
+             headers: { 'x-api-key': '8j4PRtLBHb238JMHThMhnr2TtTFNjRBF' }
+         }
+     )
+
+     console.log(data);
+
+    // fetch(url, {
+    //     method: "POST",
+    //     body: JSON.stringify(body1),
+    //     headers: {
+    //         "Content-type": "application/json; charset=UTF-8",
+    //         'x-api-key': '8j4PRtLBHb238JMHThMhnr2TtTFNjRBF'
     //     }
-    // )
-
-    // console.log(data);
-
-    fetch(url, {
-        method: "POST",
-        body: JSON.stringify(body1),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-            'x-api-key': '8j4PRtLBHb238JMHThMhnr2TtTFNjRBF'
-        }
-    }).then((data) => {
-        console.log(data);
-    }).catch(e => {
-        console.log(e);
-    })
+    // }).then((data) => {
+    //     console.log(data);
+    // }).catch(e => {
+    //     console.log(e);
+    // })
 
 }
 export default tollGuru
